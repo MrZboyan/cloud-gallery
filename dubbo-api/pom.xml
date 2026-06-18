@@ -19,17 +19,11 @@
         <module>upload-api</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
     <dependencies>
         <!-- 只依赖common-core（纯POJO，无Web依赖）-->
         <dependency>
             <groupId>com.project.common</groupId>
             <artifactId>common-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Lombok -->
         <dependency>
