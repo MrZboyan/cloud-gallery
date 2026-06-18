@@ -1,0 +1,2 @@
+providerLogAndExceptionFilter=com.common.web.dubbo.ProviderLogAndExceptionFilter
+consumerLogAndExceptionFilter=com.common.web.dubbo.ConsumerLogAndExceptionFilter

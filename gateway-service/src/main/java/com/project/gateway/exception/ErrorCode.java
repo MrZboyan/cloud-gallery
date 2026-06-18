@@ -1,0 +1,46 @@
+package com.project.gateway.exception;
+
+import lombok.Getter;
+
+/**
+ * 自定义错误码
+ */
+@Getter
+public enum ErrorCode {
+
+    // 业务相关错误
+    PARAMS_ERROR(410, "请求参数错误"),
+    NOT_LOGIN_ERROR(411, "未登录"),
+    NO_AUTH_ERROR(412, "无权限"),
+    NOT_FOUND_ERROR(413, "请求数据不存在"),
+    FORBIDDEN_ERROR(414, "禁止访问"),
+    // Sa-Token 错误
+    SA_TOKEN_ERROR(420, "Sa-Token 错误"),
+    // 系统错误
+    SYSTEM_ERROR(510, "系统内部异常"),
+    OPERATION_ERROR(511, "操作失败"),
+    DATABASE_ERROR(512, "数据库异常"),
+    // RPC 错误
+    RPC_TIMEOUT_ERROR(520, "服务调用超时"),
+    RPC_SERVICE_UNAVAILABLE(521, "服务暂时不可用"),
+    RPC_NETWORK_ERROR(522, "网络连接异常"),
+    RPC_SERIALIZATION_ERROR(523, "序列化异常"),
+    RPC_LIMIT_EXCEED_ERROR(524, "服务调用次数超出限制"),
+    RPC_UNKNOWN_ERROR(525, "未知错误");
+
+    /**
+     * 状态码
+     */
+    private final int code;
+
+    /**
+     * 信息
+     */
+    private final String message;
+
+    ErrorCode(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+}

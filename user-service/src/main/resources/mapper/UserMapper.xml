@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+<mapper namespace="com.project.user.model.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.common.core.model.user.entity.User">
+        <id property="userId" column="userId"/>
+        <result property="userAccount" column="userAccount"/>
+        <result property="userPassword" column="userPassword"/>
+        <result property="userName" column="userName"/>
+        <result property="userAvatar" column="userAvatar"/>
+        <result property="userProfile" column="userProfile"/>
+        <result property="userRole" column="userRole"/>
+        <result property="createTime" column="createTime"/>
+        <result property="updateTime" column="updateTime"/>
+        <result property="isDelete" column="isDelete"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        userId,userAccount,userPassword,userName,userAvatar,userProfile,
+        userRole,createTime,updateTime,isDelete
+    </sql>
+</mapper>
