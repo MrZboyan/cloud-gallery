@@ -12,22 +12,14 @@
     <groupId>com.project.auth</groupId>
     <artifactId>auth-service</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.project.common</groupId>
             <artifactId>common-web</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.project.dubbo</groupId>
             <artifactId>user-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- lombok注解 -->
         <dependency>
@@ -35,34 +27,19 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- mysql -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.3.0</version>
-        </dependency>
-        <!-- Sa-Token 权限认证 https://sa-token.cc -->
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot3-starter</artifactId>
-            <version>1.44.0</version>
-        </dependency>
-        <!-- Sa-Token OAuth2.0 模块 -->
+        <!-- Sa-Token OAuth2.0 模块（auth-service 专属） -->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-oauth2</artifactId>
-            <version>1.44.0</version>
-        </dependency>
-        <!-- Sa-Token 整合 Redis （使用 jackson 序列化方式） -->
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-redis-jackson</artifactId>
-            <version>1.44.0</version>
         </dependency>
         <!-- 负载均衡 Loadbalancer -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
+        <!--
+            以下依赖均由 common-web 传递引入，无需重复声明：
+            mysql-connector-j、sa-token-spring-boot3-starter、sa-token-redis-jackson
+        -->
     </dependencies>
 </project>
